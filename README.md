@@ -8,6 +8,9 @@
 ## How to use
 
 `git clone git@github.com:marcelinhov2/rapidapi-ignition.git`
+
 `cd rapidapi-ignition`
+
 `npm install`
+
 `npm run lambda`
