@@ -1,0 +1,39 @@
+{
+  "name": "rapidapi-ignition",
+  "version": "0.0.0-semantic-release",
+  "description": "RapidAPI Ignition",
+  "license": "ISC",
+  "main": "index.js",
+  "dependencies": {
+    "batch-promises": "^0.0.3",
+    "fs": "^0.0.1-security",
+    "neat-csv": "^5.2.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "mocha": "^4.0.1",
+    "node-lambda": "^0.14.0",
+    "nyc": "^11.3.0",
+    "semantic-release": "^15.5.0"
+  },
+  "optionalDependencies": {},
+  "scripts": {
+    "setup": "./node_modules/.bin/node-lambda setup",
+    "test": "export LAMBDA_TESTER_NODE_VERSION_CHECK=false && ./node_modules/.bin/mocha --recursive",
+    "lambda": "./node_modules/.bin/node-lambda run",
+    "package": "./node_modules/.bin/node-lambda package",
+    "deploy": "./node_modules/.bin/node-lambda deploy",
+    "semantic-release": "semantic-release"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
